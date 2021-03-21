@@ -1,8 +1,3 @@
-declare module '*.svelte'
+declare module '*.svelte';
 
-declare interface ImportMeta {
-  hot: {
-    accept: () => unknown;
-    dispose: (cb: () => unknown) => unknown;
-  };
-}
+declare module '@beyonk/svelte-google-analytics';
