@@ -40,11 +40,9 @@
   };
 </script>
 
-{#if import.meta.env.NODE_ENV === "production"}
-  <GoogleAnalytics
-    properties={[import.meta.env.SNOWPACK_PUBLIC_GOOGLE_ANALYTICS_ID]}
-  />
-{/if}
+<GoogleAnalytics
+  properties={[import.meta.env.SNOWPACK_PUBLIC_GOOGLE_ANALYTICS_ID]}
+/>
 
 <Orb />
 
