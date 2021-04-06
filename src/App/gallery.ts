@@ -1,7 +1,7 @@
-import { writable } from 'svelte/store';
+import { writable } from "svelte/store";
 
 const gallery = writable<string[]>([], (set) => {
-  const persisted = localStorage.getItem('gallery');
+  const persisted = localStorage.getItem("gallery");
 
   if (!persisted) {
     set([] as string[]);
@@ -18,9 +18,9 @@ const gallery = writable<string[]>([], (set) => {
 
 gallery.subscribe((value) => {
   try {
-    localStorage.setItem('gallery', JSON.stringify(value))
+    localStorage.setItem("gallery", JSON.stringify(value));
   } catch {
-    alert('Could not save drawing!');
+    alert("Could not save drawing!");
   }
 });
 
